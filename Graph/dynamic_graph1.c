@@ -11,12 +11,12 @@ struct edges
 {
     int src;
     int dest;
-
+    int cost;
 };
 int main()
 {
     int i;
-    int src, dest;
+    int src, dest,cost;
     struct graph g;
     struct edges *e;
 
@@ -30,11 +30,11 @@ int main()
     for(i=0;i<g.totaledges;i++)
     {
         printf("\nenter source and destination :- ");
-        scanf("%d%d",&src,&dest);
+        scanf("%d%d%d",&src,&dest,&cost);
 
         e[i].src = src;
         e[i].dest = dest;
-
+        e[i].cost = cost;
         i++;
         
         e[i].src = dest;
